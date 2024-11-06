@@ -1,0 +1,213 @@
+/* Base Styles */
+@font-face {
+    font-family: 'extra-bold';
+    src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'semi-bold';
+    src: url('./assets/fonts/static/Figtree-SemiBold.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'normal-font';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'normal-font-italic';
+    src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(47, 88%, 63%);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px; /* Limits card width */
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    box-shadow: 12px 12px  black;
+}
+
+.image-holder {
+    width: 100%;
+    border-radius: 2vh;
+}
+
+/* Styles for the content box */
+.learning-box {
+    background-color: hsl(47, 88%, 63%);
+    text-align: start !important;
+    justify-content: start !important;
+    padding: 1rem;
+    display: block;
+    max-width: max-content;
+    font-weight: bolder;
+    border-radius: 1vh;
+    margin-top: 3vh;
+}
+
+/* Date, title, and description styling */
+.date-stamp {
+    padding-top: 2vh;
+    text-align: start;
+    font-family: 'normal-font', sans-serif;
+    font-weight: 100;
+}
+
+.title {
+    padding-top: 2vh;
+    font-family: 'extra-bold', sans-serif;
+    text-align: start;
+    font-weight: 900;   
+}
+.title:hover {
+    color: hsl(47, 88%, 63%);
+}
+
+.description {
+    font-family: 'normal-font-italic', sans-serif;
+    text-align: start;
+    padding-top: 2vh;
+    font-weight: 100;
+    font-style: italic;
+    color: hsl(0, 0%, 42%);
+}
+
+.user-avatar {
+    padding-top: 4vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: start;
+}
+
+.user-avatar .image {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-avatar .name {
+    flex-direction: column;
+    font-family: 'semi-bold', sans-serif;
+    text-align: center;
+    padding-top: 3vh;
+    margin-left: 1vh;
+}
+
+/* Responsive Adjustments */
+
+/* Small screens (up to 450px) */
+@media (max-width: 450px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+}
+
+/* Medium screens (up to 768px) */
+@media (min-width: 451px) and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .user-avatar .name {
+        font-size: 0.8rem;
+    }
+}
+
+/* Large screens (up to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2rem;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+        margin: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .user-avatar .name {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra large screens (1200px and up) */
+@media (min-width: 1201px) {
+    .container {
+        justify-content: center;
+        padding: 3rem;
+    }
+
+    .card {
+        max-width: 400px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .user-avatar .name {
+        font-size: 1rem;
+    }
+}
